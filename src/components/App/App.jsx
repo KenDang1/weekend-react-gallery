@@ -11,6 +11,7 @@ function App() {
     getGallery();
   }, []);  // don't forget that []
 
+  // getting data from server
   const getGallery = () => {
     axios({
       method: 'GET',
@@ -24,11 +25,29 @@ function App() {
       })
   }; // end getGallery
 
+  
+  // this function will pass to GalleryList
+  const loveIt = (id) => {
+    axios({
+      method: 'PUT',
+      url:  `/gallery/like/${id}`,
+    })
+    .then((res) => {
+      console.log('in PUT /gallery app side', res);
+      getGallery();
+    })
+    .catch((err) => {
+      console.log('Error in PUT /gallery app side', err);
+    })
+  }; // end of loveIt
+
+
 
 
     return (
       <GalleryList
         galleryList={galleryList}
+        loveIt={loveIt}
       />
     );
 }

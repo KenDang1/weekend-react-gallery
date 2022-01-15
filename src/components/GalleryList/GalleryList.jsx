@@ -1,6 +1,7 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList ({galleryList}) {
+// props pass from App.jsx are galleryList and loveIt
+function GalleryList ({galleryList, loveIt}) {
 
     return(
         <>
@@ -12,7 +13,10 @@ function GalleryList ({galleryList}) {
                         galleryList.map(gallery => (
                             <GalleryItem
                                 key={gallery.id}
+                                
+                            // passing the props to GalleryItem
                                 gallery={gallery}
+                                loveIt={loveIt}
                             />
                         ))
                     }
