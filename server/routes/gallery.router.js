@@ -9,6 +9,8 @@ router.put('/like/:id', (req, res) => {
     console.log(req.params);
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
+        console.log('gallery item', galleryItems);
+        
         if(galleryItem.id == galleryId) {
             galleryItem.likes += 1;
         }
