@@ -1,9 +1,14 @@
 function GalleryItem({gallery}) {
     return (
-        <li key={gallery.id}>
-            {gallery.path}
-            {gallery.description}
-        </li>
+        <>
+        <div>
+        <img src={gallery.path}/>
+        <br />
+        <button className='like'>Love It ❤️</button>
+        <br />
+        <span>People love it: 0 </span>
+        </div>
+        </>
     )
 };
 
