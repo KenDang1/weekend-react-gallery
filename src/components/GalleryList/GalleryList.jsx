@@ -1,18 +1,22 @@
-import GalleryItem from '../GalleryItem/GalleryItem'
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList ({item}) {
+function GalleryList ({galleryList}) {
+
     return(
         <>
         <div>
+            <h1>My Gallery</h1>
             <ul>
-                {
-                    item.map(gallery => (
-                        <GalleryItem 
-                        key={gallery.id}
-                        gallery={gallery}
-                        />
-                    ))
-                }
+                <div>
+                    {
+                        galleryList.map(gallery => (
+                            <GalleryItem
+                                key={gallery.id}
+                                gallery={gallery}
+                            />
+                        ))
+                    }
+                </div>
             </ul>
         </div>
         </>
