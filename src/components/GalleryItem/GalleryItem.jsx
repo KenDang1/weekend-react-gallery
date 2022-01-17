@@ -1,6 +1,12 @@
+import "./GalleryItem.css";
+import {useState} from 'react';
 
 // props gallery and loveIT
 function GalleryItem({gallery, loveIt}) {
+
+    const [isClicked, setIsClicked] = useState(false);
+    const toggleChange = () => setIsClicked(!isClicked);
+    const picture = <img src={gallery.path} height= "100px" width="100px"/>
 
     const onLoveIt = () => {
         // target the id so it know which one to like
@@ -9,8 +15,8 @@ function GalleryItem({gallery, loveIt}) {
 
     return (
         <>
-        <div>
-        <img src={gallery.path} height="100px" width="100px"/>
+        <div className="item">
+        <button  onClick={toggleChange}>{isClicked? gallery.description : picture}</button>
         <br />
         <button className='like' onClick={onLoveIt}>Love It ❤️</button>
         <br />
