@@ -5,5 +5,5 @@ id SERIAL PRIMARY KEY,
 "likes" INTEGER);
 
 INSERT INTO "gallery" 
-	("pic" , "description")
-VALUES ('/images/yin-yang-tiger-dragon.jpg', 'Tattoo on my right shoulder');
+	("pic" , "description", "likes")
+VALUES ('/images/yin-yang-tiger-dragon.jpg', 'Tattoo on my right shoulder', 0);

@@ -16,11 +16,13 @@ function GalleryItem({gallery, loveIt}) {
     return (
         <>
         <div className="item">
-        <button  onClick={toggleChange}>{isClicked? gallery.description : picture}</button>
-        <br />
-        <button className='like' onClick={onLoveIt}>Love It ❤️</button>
-        <br />
-        <span>People love it: {gallery.likes} </span>
+            <div>
+                <button  onClick={toggleChange}>{isClicked? gallery.description : picture}</button>
+            </div>
+            <br />
+            <button className='like' onClick={onLoveIt}>Love It ❤️</button>
+            <br />
+            <span>People love it: {gallery.likes} </span>
         </div>
         </>
     )

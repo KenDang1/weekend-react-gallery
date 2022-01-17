@@ -28,10 +28,11 @@ function App() {
 
   
   // this function will pass to GalleryList
-  const loveIt = (id) => {
+  const loveIt = (id, gallery) => {
     axios({
       method: 'PUT',
       url:  `/gallery/like/${id}`,
+      data: gallery
     })
     .then((res) => {
       console.log('in PUT /gallery app side', res);
