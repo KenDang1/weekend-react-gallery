@@ -3,6 +3,7 @@ import {useEffect,useState} from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList.jsx'
+import Header from '../Header/Header'
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
@@ -42,13 +43,14 @@ function App() {
   }; // end of loveIt
 
 
-
-
     return (
+      <>
+      <Header/>
       <GalleryList
         galleryList={galleryList}
         loveIt={loveIt}
       />
+      </>
     );
 }
 

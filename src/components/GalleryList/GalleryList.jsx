@@ -1,4 +1,5 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
+import './GalleryList.css';
 
 // props pass from App.jsx are galleryList and loveIt
 function GalleryList ({galleryList, loveIt}) {
@@ -6,7 +7,6 @@ function GalleryList ({galleryList, loveIt}) {
     return(
         <>
         <div>
-            <h1>My Gallery</h1>
             <ul>
                 <div>
                     {
