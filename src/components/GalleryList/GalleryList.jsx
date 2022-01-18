@@ -17,6 +17,7 @@ function GalleryList ({galleryList, loveIt}) {
                             // passing the props to GalleryItem
                                 gallery={gallery}
                                 loveIt={loveIt}
+                                
                             />
                         ))
                     }

@@ -8,7 +8,8 @@ function GalleryItem({gallery, loveIt}) {
     const toggleChange = () => setIsClicked(!isClicked);
     const picture = <img src={gallery.path} height= "100px" width="100px"/>
 
-    const onLoveIt = () => {
+    const onLoveIt = (evt) => {
+        evt.preventDefault();
         // target the id so it know which one to like
         loveIt(gallery.id);
     };
